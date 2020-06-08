@@ -25,7 +25,12 @@ export default function Index() {
   return (
     <View className="index">
       {posts.map((post, index) => (
-        <PostCard key={index} title={post.title} content={post.content} />
+        <PostCard
+          key={index}
+          title={post.title}
+          content={post.content}
+          isList
+        />
       ))}
       <PostForm
         formTitle={formTitle}
@@ -37,6 +42,7 @@ export default function Index() {
     </View>
   )
 }
+
 
 Index.config = {
   navigationBarTitleText: '首页',
